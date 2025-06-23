@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "Challenge 1 - Pizzas API",
+    "_postman_id": "your-unique-id",
+    "description": "Postman collection for Pizza API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Restaurants",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5002/restaurants",
+          "host": ["localhost"],
+          "port": "5002",
+          "path": ["restaurants"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Restaurant by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5002/restaurants/1",
+          "host": ["localhost"],
+          "port": "5002",
+          "path": ["restaurants", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Restaurant",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5002/restaurants/1",
+          "host": ["localhost"],
+          "port": "5002",
+          "path": ["restaurants", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Pizzas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5002/pizzas",
+          "host": ["localhost"],
+          "port": "5002",
+          "path": ["pizzas"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create a Pizza",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Margherita\",\n  \"ingredients\": \"Dough, Tomato, Cheese\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5002/pizzas",
+          "host": ["localhost"],
+          "port": "5002",
+          "path": ["pizzas"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create RestaurantPizza",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"price\": 10, \"pizza_id\": 1, \"restaurant_id\": 1 }"
+        },
+        "url": {
+          "raw": "http://localhost:5002/restaurant_pizzas",
+          "host": ["localhost"],
+          "port": "5002",
+          "path": ["restaurant_pizzas"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
